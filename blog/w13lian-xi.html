@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>2016Fall 課程網誌 (虎尾科大MDE)</title>
+    <title>W13練習 - 2016Fall 課程網誌 (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,15 +10,21 @@
 
 
 
-<link rel="canonical" href=".">
-        <meta name="author" content="KMOL" />
+<link rel="canonical" href="./w13lian-xi.html">
 
-    <!-- Open Graph tags -->
+        <meta name="author" content="江宜欣" />
+        <meta name="keywords" content="brython" />
+        <meta name="description" content="將 http://mde.tw/2016fallcp/course/Python3Programs.txt 整理成brython" />
+
         <meta property="og:site_name" content="2016Fall 課程網誌 (虎尾科大MDE)" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="2016Fall 課程網誌 (虎尾科大MDE)"/>
-        <meta property="og:url" content="."/>
-        <meta property="og:description" content="2016Fall 課程網誌 (虎尾科大MDE)"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="W13練習"/>
+        <meta property="og:url" content="./w13lian-xi.html"/>
+        <meta property="og:description" content="將 http://mde.tw/2016fallcp/course/Python3Programs.txt 整理成brython"/>
+        <meta property="article:published_time" content="2016-12-09" />
+            <meta property="article:section" content="course" />
+            <meta property="article:tag" content="brython" />
+            <meta property="article:author" content="江宜欣" />
 
 
     <!-- Bootstrap -->
@@ -99,7 +105,7 @@
                          <li><a href="./pages/about/">
                              About
                           </a></li>
-                        <li >
+                        <li class="active">
                             <a href="./category/course.html">Course</a>
                         </li>
                         <li >
@@ -124,23 +130,76 @@
     <div class="row">
         <div class="col-sm-9">
 
-            <article>
-                <h2><a href="./w13lian-xi.html">W13練習</a></h2>
-                <div class="summary"><p>將<a href="http://mde.tw/2016fallcp/course/Python3Programs.txt">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="./w13lian-xi.html"
+                       rel="bookmark"
+                       title="Permalink to W13練習">
+                        W13練習
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-12-09T12:00:00+08:00"> 週五 09 十二月 2016</time>
+    </span>
+            <span class="label label-default">By</span>
+            <a href="./author/jiang-yi-xin.html"><i class="fa fa-user"></i> 江宜欣</a>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/brython.html">brython</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>將<a href="http://mde.tw/2016fallcp/course/Python3Programs.txt">
 http://mde.tw/2016fallcp/course/Python3Programs.txt</a> 整理成brython</p>
 
-                    <a class="btn btn-default btn-xs" href="./w13lian-xi.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./2016fall-ji-jie-she-ji-zhu-ti-jiao-xue-cpa.html">2016Fall 機械設計主題教學 (cpa)</a></h2>
-                <div class="summary"><p>知識管理與最佳化應用實驗室試圖利用計算機程式、網際內容管理、電腦輔助設計實習與協同產品設計實習等課程, 進行與機械設計相關的主題式教學, 其中包含強化創造力的教學、令學員熟習六種工程表達方式, 並且俱備融入協同設計所需要的四大面向知識與技能.</p>
 
-                    <a class="btn btn-default btn-xs" href="./2016fall-ji-jie-she-ji-zhu-ti-jiao-xue-cpa.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
+<!-- 導入 Brython 標準程式庫 -->
+
+<script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
+</script>
+
+<!-- 啟動 Brython -->
+
+<script>
+window.onload=function(){
+brython(1);
+}
+</script>
+
+<!-- 以下實際利用  Brython 畫圖 -->
+
+<div id="temperature"></div>
+
+<script type="text/python3">
+from browser import document as doc
+from browser import html 
+container = doc['temperature']
+mystring = ""
+cdegree = input("請輸入攝氏溫度:")
+fdegree = float(cdegree)*9/5 + 32
+output_string = "攝氏 " + str(cdegree) + "度=華氏" + str(fdegree) + "度"
+container <= output_string
+</script>
+
+<p>開始進行範例分配</p>
+<p>接受使用者輸入</p>
+<p>利用aler()顯示結果</p>
+<p>直接列印結果</p>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
 
         </div>
         <div class="col-sm-3" id="sidebar">
